@@ -1,0 +1,17 @@
+technologies = {
+	PRC_Gundam = {
+		enable_subunits = { }
+		allow = { has_country_flag = PRC_Gundam }
+		categories = {
+			armor
+		}
+		enable_equipments = {
+			PRC_Gundam_equipment_1
+			PRC_Gundam_equipment_2
+		}
+		on_research_complete = {
+		
+		}
+	}
+
+}
