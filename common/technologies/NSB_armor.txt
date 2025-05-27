@@ -181,7 +181,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 6 }
+			position = { x = -4 y = 4 }
 		}
 
 		ai_will_do = {
@@ -255,7 +255,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 6 y = 2 }
+			position = { x = 4 y = 2 }
 		}
 
 		ai_will_do = {
@@ -333,7 +333,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 6 y = 4 }
+			position = { x = 7 y = 2 }
 		}
 
 		ai_will_do = {
@@ -388,7 +388,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 8 }
+			position = { x = -4 y = 6 }
 		}
 
 		ai_will_do = {
@@ -865,7 +865,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 5 }
+			position = { x = 0 y = 5}
 		}
 
 		ai_will_do = {
@@ -900,7 +900,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2.5 y = 3 }
+			position = { x = 3 y = 3 }
 		}
 
 		ai_will_do = {
@@ -1062,6 +1062,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		path={
+			leads_to_tech= third_gen_thermal_tech
+			research_cost_coeff=1
+		}
+
 		path = {
 			leads_to_tech = third_gen_nv_tech
 			research_cost_coeff = 1
@@ -1139,11 +1144,6 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = third_gen_thermal_tech
-			research_cost_coeff = 1
-		}
-		
-		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
 		}
@@ -1158,7 +1158,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 8 }
+			position = { x = 2 y = 6 }
 		}
 
 		ai_will_do = {
@@ -1197,7 +1197,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1945 }
+			position = { x = 2 y = 8 }
 		}
 
 		ai_will_do = {
@@ -1236,7 +1236,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 8 }
+			position = { x = -1 y = 6 }
 		}
 
 		ai_will_do = {
@@ -1300,7 +1300,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 5 y = 8 }
+			position = { x = 5 y = 4 }
 		}
 
 		ai_will_do = {
@@ -1457,7 +1457,7 @@ technologies = {
 		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 3 y = @1940 }
+			position = { x = 3 y = 4 }
 		}
 
 		ai_will_do = {
@@ -1501,7 +1501,7 @@ technologies = {
 		start_year = 2028
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1944 }
+			position = { x = 2 y = 6 }
 		}
 		
 		enable_equipment_modules = {
@@ -1554,7 +1554,7 @@ technologies = {
 		start_year = 2028
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 4 y = @1944 }
+			position = { x = 4 y = 6 }
 		}
 		
 		enable_equipment_modules = {
@@ -1618,7 +1618,7 @@ technologies = {
 		start_year = 2018
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 2 y = 2 }
 		}
 
 		ai_will_do = {
@@ -1729,7 +1729,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1941 }
+			position = { x = 2 y = 6 }
 		}
 
 		ai_will_do = {
@@ -1771,7 +1771,7 @@ technologies = {
 		start_year = 2032
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1944 }
+			position = { x = 2 y = 8 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_4_tt

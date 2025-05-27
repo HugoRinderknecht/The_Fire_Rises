@@ -1453,6 +1453,7 @@ equipment_modules = {
 		}
 	}
 	
+	#APFSDS 尾翼稳定脱壳穿甲弹
 	Armor_Piercing_Fin_Stabilized_Discarding_Sabot = {
 
 		abbreviation ="APFSDS"
