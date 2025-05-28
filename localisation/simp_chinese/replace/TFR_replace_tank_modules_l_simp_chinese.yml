@@ -453,7 +453,7 @@ heatfs_tech_desc:"一种结合了空心装药破甲技术与尾翼稳定飞行�
  blow_out_compartment_tech: "湿式弹药架"
  blow_out_compartment_tech_desc: "一种能够防止坦克底盘内弹药殉爆，造成像通常情况下那样严重损害的系统。"
 Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_tech: "尾翼稳定串联破甲弹"
-Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_tech_desc: "多级战斗部串联的新式破甲弹，能有效地突破爆炸反应装甲的防护"
+Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_tech_desc: "一种拥有多级战斗部并进行串联组装的新式破甲弹，能有效地突破爆炸反应装甲的防护"
 Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition: "尾翼稳定串联破甲弹"
 Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_desc: ""
 Anti_Tank_Guided_Missile_tech:"反坦克导弹"
