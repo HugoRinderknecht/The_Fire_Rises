@@ -1,6 +1,4 @@
 technologies = {
-
-
 	@1918 = 0
 	@1936 = 2
 	@1938 = 4
@@ -12,144 +10,157 @@ technologies = {
 	@1944 = 11
 	@1945 = 12
 	@1946 = 20
-
 	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
-	gwtank_chassis = { #Leichttraktor
-
+	#冷战轻型坦克
+	gwtank_chassis = {
+		#Leichttraktor
 		enable_equipments = {
 			light_tank_chassis_0
 		}
 		enable_equipment_modules = {
+			#机关枪
+			tank_auto_cannon
+			#冷战小口径火炮
+			tank_small_cannon
+			#次口径滑膛炮
+			secondary_turret_small_cannon
+			#车载工程铲
+			dozer_blade
+			#扭力杆
 			tank_torsion_bar_suspension
+			#轧制匀质钢装甲
 			tank_riveted_armor
-			tank_cast_armor
 			tank_christie_suspension
+			#交错负重轮
 			tank_interleaved_suspension
+			#双乘员炮塔
 			tank_light_two_man_tank_turret
+			#三乘员炮塔
 			tank_light_three_man_tank_turret
 		}
 		enable_subunits = {
 			light_armor
 		}
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
+			NOT = {
+				has_template_containing_unit = light_armor
+			}
+			NOT = {
+				has_template_containing_unit = heavy_armor
+			}
+			NOT = {
+				has_template_containing_unit = medium_armor
+			}
 		}
-
 		path = {
 			leads_to_tech = basic_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		
 		path = {
-			leads_to_tech = legacy_armor_designs
+			leads_to_tech = engine_tech_1
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
 		start_year = 1980
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 0 }
+			position = {
+				x = -4
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "2020.1.1"
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "2022.1.1"
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "2024.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
 	}
-
-	basic_light_tank_chassis = { #Panzer I
-
+	#基础轻型坦克
+	basic_light_tank_chassis = {
+		#Panzer I
 		enable_equipments = {
 			light_tank_chassis_1
 		}
-	
 		enable_equipment_modules = {
 			tank_small_cannon_2
 		}
-		
 		enable_subunits = {
 			light_armor
 		}
-		
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
+			NOT = {
+				has_template_containing_unit = light_armor
+			}
+			NOT = {
+				has_template_containing_unit = heavy_armor
+			}
+			NOT = {
+				has_template_containing_unit = medium_armor
+			}
 		}
-
 		path = {
 			leads_to_tech = improved_light_tank_chassis
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = engine_tech_2
+			research_cost_coeff = 1
+		}
 		research_cost = 2.5
 		start_year = 2018
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 2 }
+			position = {
+				x = -4
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2020.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2022.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2024.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
 	}
-
-	improved_light_tank_chassis = { #Panzer II
-	
+	improved_light_tank_chassis = {
+		#Panzer II
 		on_research_complete = {
 			if = {
 				limit = {
@@ -157,36 +168,38 @@ technologies = {
 				}
 				custom_effect_tooltip = unmanned_tech_tt
 				SOV = {
-					country_event = { id = russia.136 }
+					country_event = {
+						id = russia.136
+					}
 				}
 			}
 		}
 		show_effect_as_desc = yes
-
 		enable_equipments = {
 			light_tank_chassis_2
 		}
-
 		enable_equipment_modules = {
 			tank_small_cannon_3
 		}
-		
 		path = {
 			leads_to_tech = advanced_light_tank_chassis
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = engine_tech_3
+			research_cost_coeff = 1
+		}
 		research_cost = 3.5
 		start_year = 2022
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 4 }
+			position = {
+				x = -4
+				y = 4
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -197,66 +210,57 @@ technologies = {
 			}
 			modifier = {
 				is_major = yes
-				not = { tag = JAP }
+				not = {
+					tag = JAP
+				}
 				has_war = yes
-				factor = 10 #you are embarassing yourself
+				factor = 10				#you are embarassing yourself
 			}
 			modifier = {
 				tag = SOV
 				factor = 3
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2024.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2026.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2028.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
 	}
-
-
-
-	amphibious_tank_chassis = { #SchwimmPanzer II
-
+	amphibious_tank_chassis = {
+		#SchwimmPanzer II
 		enable_equipments = {
 			amphibious_tank_chassis_1
 		}
-
 		enable_subunits = {
 			amphibious_armor
 		}
-
-
 		allow_branch = {
 			has_dlc = "Man the Guns"
 		}
-
 		research_cost = 2
 		start_year = 2000
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 7 y = 0 }
+			position = {
+				x = 7
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 0.5
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -280,40 +284,34 @@ technologies = {
 				factor = 0
 			}
 		}
-
 		categories = {
 			armor
 			tp_tech
 		}
 	}
-
-	amphibious_drive = { #SchwimmPanzer II
-
-
+	amphibious_drive = {
+		#SchwimmPanzer II
 		enable_equipment_modules = {
 			amphibious_drive
 		}
-
-		path={
-			leads_to_tech= amphibious_tank_chassis
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = amphibious_tank_chassis
+			research_cost_coeff = 1
 		}
-
 		allow = {
 			if = {
 				limit = {
 					tag = PRC
 				}
 				custom_trigger_tooltip = {
-				    tooltip = PRC_amphibious_drive_tt		
-				    OR = {
-				        has_country_flag = PRC_project_swimmer_succeeded1
+					tooltip = PRC_amphibious_drive_tt
+					OR = {
+						has_country_flag = PRC_project_swimmer_succeeded1
 						has_country_flag = PRC_project_nib_failed1
-				    }
+					}
 				}
 			}
 		}
-
 		#enable_equipments = {
 		#	light_tank_amphibious_chassis_0
 		#	medium_tank_amphibious_chassis_0
@@ -328,18 +326,17 @@ technologies = {
 		#	medium_tank_amphibious_chassis_3
 		#	heavy_tank_amphibious_chassis_3
 		#}
-
 		research_cost = 2
 		start_year = 2012
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 4.5 y = 0 }
+			position = {
+				x = 5
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 0.5
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -360,18 +357,16 @@ technologies = {
 				factor = 0
 			}
 		}
-
 		categories = {
 			armor
 			tp_tech
 		}
 	}
-
-	advanced_light_tank_chassis = { #Leopard
+	advanced_light_tank_chassis = {
+		#Leopard
 		enable_equipments = {
 			light_tank_chassis_3
 		}
-		
 		on_research_complete = {
 			if = {
 				limit = {
@@ -380,168 +375,157 @@ technologies = {
 				custom_effect_tooltip = unmanned_tech_tt
 			}
 		}
+		path = {
+			leads_to_tech = engine_tech_4
+			research_cost_coeff = 1
+		}
 		show_effect_as_desc = yes
-
-		
-
 		research_cost = 3.5
 		start_year = 2024
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 6 }
+			position = {
+				x = -4
+				y = 6
+			}
 		}
-
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
 				is_major = no
 				factor = 2
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2024.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2026.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2028.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
 	}
-
-	basic_medium_tank_chassis = { #Panzer III
-
+	#基础中型坦克底盘
+	basic_medium_tank_chassis = {
+		#Panzer III
 		enable_equipments = {
 			modern_tank_chassis_1
 		}
-
 		enable_subunits = {
 			modern_armor
 			mbt_company
 		}
-		
 		enable_equipment_modules = {
+			#复合装甲
+			tank_cast_armor
+			#第二代红外
+			gunner_thermal_1
+			#第二代夜视仪
+			gunner_nv_2
+			#自动装弹机
+			auto_loader
+			#湿式弹药架
+			wet_ammo_storage
+			#冷战滑膛炮
 			tank_high_velocity_cannon
+			#冷战线膛炮
 			tank_heavy_cannon
+			#
 			gunner_optical_sight
 			tank_3_man_tank_turret
 			tank_modern_tank_turret
 		}
-		
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
+			NOT = {
+				has_template_containing_unit = light_armor
+			}
+			NOT = {
+				has_template_containing_unit = heavy_armor
+			}
+			NOT = {
+				has_template_containing_unit = medium_armor
+			}
 		}
-
 		path = {
 			leads_to_tech = improved_medium_tank_chassis
 			research_cost_coeff = 1
 		}
-
-		path={
-			leads_to_tech=amphibious_drive
-			research_cost_coeff=1
-		}
-		
 		path = {
-			leads_to_tech = auto_loader_tech
+			leads_to_tech = amphibious_drive
 			research_cost_coeff = 1
 		}
-		
-		path = {
-			leads_to_tech = blow_out_compartment_tech
-			research_cost_coeff = 1
-		}
-
 		research_cost = 2
 		start_year = 1980
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 0 }
+			position = {
+				x = 2
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 2
 				is_major = yes
 			}
 			modifier = {
 				tag = SOV
-				factor = 15.0
+				factor = 15
 			}
 			modifier = {
 				factor = 1.1
 				date > "2021.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2022.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2023.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_medium_armor
 		}
 	}
-	
-	
-
-	
 	#脱壳穿甲弹
 	apds_tech = {
-		
 		path = {
 			leads_to_tech = apfsds_tech
 			research_cost_coeff = 1
 		}
-		
-		
-	
 		modern_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		light_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 1980
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 1 }
+			position = {
+				x = -2
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -551,45 +535,39 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
 	#尾翼稳定脱壳穿甲弹
 	apfsds_tech = {
-
 		enable_equipment_modules = {
 			Armor_Piercing_Fin_Stabilized_Discarding_Sabot
 		}
-
-		path ={
-			leads_to_tech= Penetrator_With_Enhanced_Lateral_Effect_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Penetrator_With_Enhanced_Lateral_Effect_tech
+			research_cost_coeff = 1
 		}
-		
 		modern_armor = {
 			hard_attack = 0.05
-			breakthrough = 0.10
+			breakthrough = 0.05
 		}
-		
 		light_armor = {
 			hard_attack = 0.05
-			breakthrough = 0.10
+			breakthrough = 0.05
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 3 }
+			position = {
+				x = -2
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -599,35 +577,31 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	#横向效应增强弹 PELE
 	Penetrator_With_Enhanced_Lateral_Effect_tech = {
-	
 		enable_equipment_modules = {
 			Penetrator_With_Enhanced_Lateral_Effect
 		}
-		
-		path={
-			leads_to_tech= Active_Lateral_Penetrator_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Active_Lateral_Penetrator_tech
+			research_cost_coeff = 1
 		}
-
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 5 }
+			position = {
+				x = -2
+				y = 4
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -637,31 +611,27 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	#主动横向效应弹 ALP
 	Active_Lateral_Penetrator_tech = {
-	
 		enable_equipment_modules = {
 			Active_Lateral_Penetrator
 		}
-		
-
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -2 y = 7 }
+			position = {
+				x = -2
+				y = 6
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -671,41 +641,35 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	turret_mounted_mg_tech = {
-		
 		path = {
 			leads_to_tech = auto_cannon_tech
 			research_cost_coeff = 1
 		}
-		
-	
 		modern_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		light_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 1980
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 1 }
+			position = {
+				x = -4
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -715,42 +679,36 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
-	#破甲弹
+	#高爆破甲弹
 	heat_tech = {
-		
 		path = {
 			leads_to_tech = heatfs_tech
 			research_cost_coeff = 1
 		}
-		
-	
 		modern_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		light_armor = {
 			hard_attack = 0.05
 			breakthrough = 0.05
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 1980
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 1 y = 1 }
+			position = {
+				x = 0
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -760,30 +718,26 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
-	
 	auto_cannon_tech = {
-		
 		enable_equipment_modules = {
 			tank_auto_cannon_2
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 3 }
+			position = {
+				x = -4
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -793,49 +747,42 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
 	#尾翼稳定破甲弹 HEATFS
 	heatfs_tech = {
-	
 		modern_armor = {
 			hard_attack = 0.05
 		}
-		
 		light_armor = {
 			hard_attack = 0.05
 		}
-		
-		path={
+		path = {
 			leads_to_tech = Anti_Tank_Guided_Missile_tech
-			research_cost_coeff=1
+			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = turret_mounted_manpad_tech
 			research_cost_coeff = 1
 		}
-	
 		path = {
 			leads_to_tech = Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_tech
-			research_cost_coeff=1
+			research_cost_coeff = 1
 		}
-
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 1 y = 3 }
+			position = {
+				x = 0
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -845,41 +792,36 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
 	#尾翼稳定串联破甲弹 FST-HEAT
 	Fin_Stabilized_Tandem_High_Explosive_Anti_Tank_Munition_tech = {
-		
 		path = {
 			leads_to_tech = Tandem_Charge_Anti_Tank_Missile_tech
-			research_cost_coeff=1
+			research_cost_coeff = 1
 		}
-
 		modern_armor = {
 			hard_attack = 0.1
 			breakthrough = 0.1
 		}
-
 		light_armor = {
 			hard_attack = 0.1
 			breakthrough = 0.1
 		}
-
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 5}
+			position = {
+				x = 0
+				y = 4
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -889,32 +831,27 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
-
 	#反坦克导弹 ATGM
 	Anti_Tank_Guided_Missile_tech = {
-	
 		enable_equipment_modules = {
 			Anti_Tank_Guided_Missile
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 3 y = 3 }
+			position = {
+				x = 2
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -924,30 +861,27 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	#串联反坦克导弹 TC-ATGM
 	Tandem_Charge_Anti_Tank_Missile_tech = {
-	
 		enable_equipment_modules = {
 			Tandem_Charge_Anti_Tank_Missile
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 7 }
+			position = {
+				x = 0
+				y = 6
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -957,30 +891,27 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	#炮塔防空导弹
 	turret_mounted_manpad_tech = {
-	
 		enable_equipment_modules = {
 			turret_mounted_manpad
 		}
-		
 		show_effect_as_desc = yes
-		research_cost = 1.0
+		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 5 }
+			position = {
+				x = 2
+				y = 4
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -990,113 +921,47 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
-	auto_loader_tech = {
-	
-		enable_equipment_modules = {
-			auto_loader
-		}
-
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 2000
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -1 y = 0 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-	
-	blow_out_compartment_tech = {
-	
-		enable_equipment_modules = {
-			wet_ammo_storage
-		}
-		
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 2020
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -1 y = 1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	improved_medium_tank_chassis = { #Panzer IV
-
+	#改进型中型坦克底盘
+	improved_medium_tank_chassis = {
+		#Panzer IV
 		enable_equipments = {
 			modern_tank_chassis_2
 		}
-
 		path = {
-			leads_to_tech = advanced_medium_tank_chassis
+			leads_to_tech = SNon_Explosive_Reactive_Armor_tech
 			research_cost_coeff = 1
 		}
-
-		path={
-			leads_to_tech= third_gen_thermal_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Heavy_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = third_gen_thermal_tech
+			research_cost_coeff = 1
+		}
 		path = {
 			leads_to_tech = third_gen_nv_tech
 			research_cost_coeff = 1
 		}
-		
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_2
 			tank_heavy_cannon_2
 		}
-
 		research_cost = 3.5
 		start_year = 2020
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 4 }
+			position = {
+				x = 2
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 3
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1113,144 +978,282 @@ technologies = {
 				factor = 2
 				tag = GER
 			}
-
 			modifier = {
 				factor = 2
 				tag = SOV
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2024.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2026.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "2028.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_medium_armor
 		}
 	}
-
-	advanced_medium_tank_chassis = { #Panther
-
+	#非爆炸反应庄家 NERA
+	SNon_Explosive_Reactive_Armor_tech = {
+		xor = {
+			Heavy_Explosive_Reactive_Armor_tech
+		}
+		path = {
+			leads_to_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = Dynamic_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			SNon_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 3
+				y = 4
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#自限性爆炸反应装甲 SLERA
+	Self_Limiting_Explosive_Reactive_Armor_tech = {
+		path={
+			leads_to_tech=advanced_medium_tank_chassis
+			research_cost_coeff
+		}
+		enable_equipment_modules = {
+			Self_Limiting_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 3
+				y = 6
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#重型爆炸反应装甲
+	Heavy_Explosive_Reactive_Armor_tech = {
+		xor = {
+			SNon_Explosive_Reactive_Armor_tech
+		}
+		path = {
+			leads_to_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = Dynamic_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			Heavy_Explosive_Reactive_Armor_tech
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 1
+				y = 4
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#动态反应装甲 DRA
+	Dynamic_Reactive_Armor_tech = {
+		path={
+			leads_to_tech=advanced_medium_tank_chassis
+			research_cost_coeff
+		}
+		enable_equipment_modules = {
+			Dynamic_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 1
+				y = 6
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#先进型中型坦克底盘
+	advanced_medium_tank_chassis = {
+		allow = {
+			AND = {
+				has_tech = Dynamic_Reactive_Armor_tech
+				has_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+			}
+		}
+		#Panther
 		enable_equipments = {
 			modern_tank_chassis_3
 		}
-
 		path = {
 			leads_to_tech = unmanned_turret_tech
 			research_cost_coeff = 1
 		}
-		
 		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
 		}
-		
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3
 		}
-
 		research_cost = 3.5
 		start_year = 2024
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 6 }
+			position = {
+				x = 2
+				y = 12
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 1.2
 				date > "2024.1.1"
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "2026.1.1"
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "2028.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_medium_armor
 		}
 	}
-
-	main_battle_tank_chassis = { #E-50
-
+	#先进主战坦克底盘
+	main_battle_tank_chassis = {
+		#E-50
 		enable_equipments = {
 			modern_tank_chassis_4
 		}
-
 		research_cost = 3.5
 		start_year = 2032
-
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = 8 }
+			position = {
+				x = 4
+				y = 14
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				date > "2026.1.1"
 			}
-
 			modifier = {
 				factor = 2
 				date > "2028.1.1"
 			}
-
 			modifier = {
 				factor = 2
 				date > "2030.1.1"
 			}
 		}
-
 		categories = {
 			armor
 			cat_medium_armor
 		}
 	}
-	
 	unmanned_turret_tech = {
-		
 		enable_equipment_modules = {
 			tank_unmanned_tank_turret
 		}
-		
 		show_effect_as_desc = yes
 		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 6 }
+			position = {
+				x = 1
+				y = 14
+			}
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1260,29 +1263,26 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	third_gen_nv_tech = {
-		
 		enable_equipment_modules = {
 			gunner_nv_3
 		}
-		
 		show_effect_as_desc = yes
 		research_cost = 1.5
 		start_year = 2020
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 4 }
+			position = {
+				x = -1
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1292,29 +1292,26 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
 	third_gen_thermal_tech = {
-		
 		enable_equipment_modules = {
 			gunner_thermal_2
 		}
-		
 		show_effect_as_desc = yes
 		research_cost = 1
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 5 y = 4 }
+			position = {
+				x = 5
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1324,300 +1321,14 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-	
-	armor_tech_1 = {
-		enable_equipment_modules = {
-			tank_welded_armor
-			smoke_launchers
-		}
-
-		path = {
-			leads_to_tech = armor_tech_2
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_1_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 1980
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = @1918 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2021.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2022.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2024.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_2 = {
-
-		enable_equipment_modules = {
-			sloped_armor
-		}
-		path = {
-			leads_to_tech = armor_tech_3
-			research_cost_coeff = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_2_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 2000
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = @1936 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2022.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2024.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2026.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_3 = {
-
-		enable_equipment_modules = {
-			armor_skirts
-		}
-		
-		path = {
-			leads_to_tech = armor_tech_4
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = armor_tech_5
-			research_cost_coeff = 1
-		}
-		
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_3_tt
-		}
-		show_effect_as_desc = yes
-
-		research_cost = 1
-		start_year = 2022
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 3 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2023.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2025.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2028.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
-	armor_tech_4 = {
-		
-		xor = { armor_tech_5 } 
-		
-		research_cost = 1
-		start_year = 2028
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 2 y = 6 }
-		}
-		
-		enable_equipment_modules = {
-			active_protection_system
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_4_tt
-		}
-		show_effect_as_desc = yes
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2024.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2026.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2028.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-	
-	armor_tech_5 = {
-		
-		xor = { armor_tech_4 } 
-		
-		research_cost = 1
-		start_year = 2028
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 4 y = 6 }
-		}
-		
-		enable_equipment_modules = {
-			electronic_warfare_system
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = armor_tech_4_tt
-		}
-		show_effect_as_desc = yes
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2024.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2026.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "2028.1.1"
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
 	engine_tech_1 = {
-		
 		enable_equipment_modules = {
 			tank_gasoline_engine
 			tank_diesel_engine
-		}
-
-		path = {
-			leads_to_tech = engine_tech_2
-			research_cost_coeff = 1
 		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_1_tt
@@ -1627,12 +1338,13 @@ technologies = {
 		start_year = 2018
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 2 }
+			position = {
+				x = -7
+				y = 0
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1641,55 +1353,43 @@ technologies = {
 				has_war = yes
 				factor = 2
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1937.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1938.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1939.1.1"
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	engine_tech_2 = {
-
 		enable_equipment_modules = {
 			tank_gas_turbine_engine
 			tank_turbo_diesel_engine
 		}
-
-		path = {
-			leads_to_tech = engine_tech_3
-			research_cost_coeff = 1
-		}
-
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_2_tt
 		}
 		show_effect_as_desc = yes
-
 		research_cost = 1
 		start_year = 2020
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = @1938 }
+			position = {
+				x = -7
+				y = 2
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1698,37 +1398,26 @@ technologies = {
 				has_war = yes
 				factor = 2
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1937.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1938.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1939.1.1"
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	engine_tech_3 = {
-
 		enable_equipment_modules = {
 			tank_petrol_electric_engine
-		}
-
-		path = {
-			leads_to_tech = engine_tech_4
-			research_cost_coeff = 1
 		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_3_tt
@@ -1738,12 +1427,13 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 6 }
+			position = {
+				x = -7
+				y = 4
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1752,35 +1442,32 @@ technologies = {
 				has_war = yes
 				factor = 2
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1937.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1938.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1939.1.1"
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
-
 	engine_tech_4 = {
-
 		research_cost = 1
 		start_year = 2032
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 0 y = 8 }
+			position = {
+				x = -7
+				y = 6
+			}
 		}
 		on_research_complete = {
 			custom_effect_tooltip = engine_tech_4_tt
@@ -1788,7 +1475,6 @@ technologies = {
 		show_effect_as_desc = yes
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -1797,60 +1483,19 @@ technologies = {
 				has_war = yes
 				factor = 2
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1937.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1938.1.1"
 			}
-
 			modifier = {
 				factor = 1.1
 				date > "1939.1.1"
 			}
 		}
-
-		categories = {
-			armor
-		}
-	}
-	
-	legacy_armor_designs = {
-		
-		enable_equipment_modules = {
-			tank_auto_cannon
-			tank_small_cannon
-			gunner_thermal_1
-			secondary_turret_small_cannon
-			gunner_nv_2
-			dozer_blade
-		}
-		
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 1980
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -7 y = 0 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
 		categories = {
 			armor
 		}
