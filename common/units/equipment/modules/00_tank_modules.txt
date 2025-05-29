@@ -951,6 +951,7 @@ equipment_modules = {
 		}
 	}
 
+	#现代滑膛炮
 	tank_high_velocity_cannon_2 = {
 		abbreviation = "hv2"
 		category = tank_heavy_main_armament
@@ -1461,7 +1462,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 2
+			hard_attack = 5
 			defense = 2
 			build_cost_ic = 0.5
 		}
@@ -1471,6 +1472,7 @@ equipment_modules = {
 		}
 	}
 
+	#横向效应增强弹 PELE
 	Penetrator_With_Enhanced_Lateral_Effect = {
 
 		abbreviation ="PELE"
@@ -1478,7 +1480,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 2
+			hard_attack = 2
+			soft_attack = 3
 			defense = 2
 			build_cost_ic = 0.5
 		}
@@ -1488,6 +1491,7 @@ equipment_modules = {
 		}
 	}
 
+	#主动横向增强弹药 ALP
 	Active_Lateral_Penetrator = {
 
 		abbreviation ="ALP"
@@ -1495,7 +1499,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 2
+			hard_attack = 3
+			soft_attack = 5
 			defense = 2
 			build_cost_ic = 0.5
 		}
