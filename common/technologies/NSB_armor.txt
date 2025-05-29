@@ -255,7 +255,7 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = {
-				x = 7
+				x = 6
 				y = 0
 			}
 		}
@@ -331,7 +331,7 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = {
-				x = 5
+				x = 4
 				y = 0
 			}
 		}
@@ -425,6 +425,12 @@ technologies = {
 			mbt_company
 		}
 		enable_equipment_modules = {
+			#坦克裙甲
+			armor_skirts
+			#爆炸反应装甲
+			sloped_armor
+			#烟幕发射器
+			smoke_launchers
 			#复合装甲
 			tank_cast_armor
 			#第二代红外
@@ -932,7 +938,7 @@ technologies = {
 			modern_tank_chassis_2
 		}
 		path = {
-			leads_to_tech = SNon_Explosive_Reactive_Armor_tech
+			leads_to_tech = Non_Explosive_Reactive_Armor_tech
 			research_cost_coeff = 1
 		}
 		path = {
@@ -948,6 +954,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
+			#电子压制系统
+			electronic_warfare_system
+			#APS 主动防御系统
+			active_protection_system
 			tank_high_velocity_cannon_2
 			tank_heavy_cannon_2
 		}
@@ -1001,7 +1011,7 @@ technologies = {
 		}
 	}
 	#非爆炸反应庄家 NERA
-	SNon_Explosive_Reactive_Armor_tech = {
+	Non_Explosive_Reactive_Armor_tech = {
 		xor = {
 			Heavy_Explosive_Reactive_Armor_tech
 		}
@@ -1043,8 +1053,8 @@ technologies = {
 	}
 	#自限性爆炸反应装甲 SLERA
 	Self_Limiting_Explosive_Reactive_Armor_tech = {
-		path={
-			leads_to_tech=advanced_medium_tank_chassis
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
 			research_cost_coeff
 		}
 		enable_equipment_modules = {
@@ -1089,7 +1099,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
-			Heavy_Explosive_Reactive_Armor_tech
+			Heavy_Explosive_Reactive_Armor
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1118,8 +1128,8 @@ technologies = {
 	}
 	#动态反应装甲 DRA
 	Dynamic_Reactive_Armor_tech = {
-		path={
-			leads_to_tech=advanced_medium_tank_chassis
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
 			research_cost_coeff
 		}
 		enable_equipment_modules = {

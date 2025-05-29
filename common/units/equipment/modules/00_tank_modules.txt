@@ -84,6 +84,8 @@ equipment_modules = {
 
 	###Armor Types
 
+
+
 	tank_riveted_armor = {
 		abbreviation = "riv"
 		category = tank_armor_type
@@ -121,6 +123,74 @@ equipment_modules = {
 
 	tank_cast_armor = {
 		abbreviation = "cas"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+
+		}
+	}
+	#HERA 重型爆炸反应装甲
+	Heavy_Explosive_Reactive_Armor = {
+		abbreviation = "HERA"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+
+		}
+	}
+	#NERA 非爆炸反应装甲
+	Non_Explosive_Reactive_Armor = {
+		abbreviation = "NERA"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+
+		}
+	}
+	#DRA 动态反应装甲
+	Dynamic_Reactive_Armor = {
+		abbreviation = "DRA"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+
+		}
+	}
+	#SLERA 自限性爆炸反应装甲
+	Self_Limiting_Explosive_Reactive_Armor = {
+		abbreviation = "SLERA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 
