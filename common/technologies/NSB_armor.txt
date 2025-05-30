@@ -1041,19 +1041,18 @@ technologies = {
 			armor
 		}
 	}
-	
-	#非爆炸反应庄家 NERA
+	#先进爆炸反应庄家 NERA
 	Next_Non_Explosive_Reactive_Armor_tech = {
 		enable_equipment_modules = {
 			Next_Non_Explosive_Reactive_Armor
 		}
-		path={
-			leads_to_tech=Self_Healing_Non_Explosive_Reactive_Armor_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Self_Healing_Non_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
 		}
-		path={
-			leads_to_tech=Electrostrictive_Non_Explosive_Reactive_Armor_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Electrostrictive_Non_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1090,8 +1089,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
-			SSelf_Healing_Non_Explosive_Reactive_Armor
-
+			Self_Healing_Non_Explosive_Reactive_Armor
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1118,7 +1116,7 @@ technologies = {
 			armor
 		}
 	}
-	#ENERA  电致伸缩NERA
+	#ELNERA  电致伸缩NERA
 	Electrostrictive_Non_Explosive_Reactive_Armor_tech = {
 		xor = {
 			Self_Healing_Non_Explosive_Reactive_Armor_tech
@@ -1137,43 +1135,6 @@ technologies = {
 			name = nsb_armour_folder
 			position = {
 				x = 5
-				y = 8
-			}
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		categories = {
-			armor
-		}
-	}
-	#自限性爆炸反应装甲 SLERA
-	Self_Limiting_Explosive_Reactive_Armor_tech = {
-		xor = {
-			Dynamic_Reactive_Armor_tech
-		}
-		path = {
-			leads_to_tech = advanced_medium_tank_chassis
-			research_cost_coeff = 1
-		}
-		enable_equipment_modules = {
-			Self_Limiting_Explosive_Reactive_Armor
-		}
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 2024
-		folder = {
-			name = nsb_armour_folder
-			position = {
-				x = 1
 				y = 8
 			}
 		}
@@ -1213,6 +1174,43 @@ technologies = {
 			position = {
 				x = 0
 				y = 6
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#自限性爆炸反应装甲 SLERA
+	Self_Limiting_Explosive_Reactive_Armor_tech = {
+		xor = {
+			Dynamic_Reactive_Armor_tech
+		}
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			Self_Limiting_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 1
+				y = 8
 			}
 		}
 		ai_will_do = {
@@ -1289,8 +1287,14 @@ technologies = {
 		start_year = 2024
 		allow = {
 			AND = {
-				has_tech = Dynamic_Reactive_Armor_tech
-				has_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+				OR = {
+					has_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+					has_tech = Dynamic_Reactive_Armor_tech
+				}
+				OR = {
+					has_tech = Self_Healing_Non_Explosive_Reactive_Armor_tech
+					has_tech = Electrostrictive_Non_Explosive_Reactive_Armor_tech
+				}
 			}
 		}
 		folder = {

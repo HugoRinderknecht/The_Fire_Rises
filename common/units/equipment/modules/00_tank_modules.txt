@@ -112,10 +112,10 @@ equipment_modules = {
 			armor_value = 0.5
 		}
 	}
-	#NERA 先进爆炸反应装甲
-	Next_Explosive_Reactive_Armor = {
+	#NxNERA 先进非爆炸反应装甲
+	Next_Non_Explosive_Reactive_Armor = {
 		abbreviation = "NERA"
-		category = tank_special_module
+		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {
 			defense = 4
@@ -127,10 +127,40 @@ equipment_modules = {
 			armor_value = 0.5
 		}
 	}
-	#NxNERA 先进非爆炸反应装甲
-	Next_Non_Explosive_Reactive_Armor = {
-		abbreviation = "NERA"
+	#SHNERA 自修复NERA
+	Self_Healing_Non_Explosive_Reactive_Armor = {
+		abbreviation = "SHNERA"
 		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+		}
+	}
+	#ELNERA 电致伸缩NERA
+	Electrostrictive_Non_Explosive_Reactive_Armor = {
+		abbreviation = "ELNERA"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.15
+			armor_value = 0.5
+		}
+	}
+	#NxERA 先进爆炸反应装甲
+	Next_Explosive_Reactive_Armor = {
+		abbreviation = "NxERA"
+		category = tank_special_module
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {
 			defense = 4
