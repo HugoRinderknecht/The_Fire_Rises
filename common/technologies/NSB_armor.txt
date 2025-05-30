@@ -598,7 +598,7 @@ technologies = {
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
-		start_year = 2024
+		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
 			position = {
@@ -937,9 +937,9 @@ technologies = {
 		enable_equipments = {
 			modern_tank_chassis_2
 		}
-		path={
-			leads_to_tech=Armor_Material_Upgrade_tech
-			research_cost_coeff=1
+		path = {
+			leads_to_tech = Upgrade_Of_Protection_Technology_tech
+			research_cost_coeff = 1
 		}
 		path = {
 			leads_to_tech = third_gen_thermal_tech
@@ -1007,19 +1007,18 @@ technologies = {
 		}
 	}
 	#材料升级
-	Armor_Material_Upgrade_tech = {
-
+	Upgrade_Of_Protection_Technology_tech = {
 		path = {
-			leads_to_tech =Heavy_Explosive_Reactive_Armor_tech
+			leads_to_tech = Next_Explosive_Reactive_Armor_tech
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = Non_Explosive_Reactive_Armor_tech
+			leads_to_tech = Next_Non_Explosive_Reactive_Armor_tech
 			research_cost_coeff = 1
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
-		start_year = 2024
+		start_year = 2020
 		folder = {
 			name = nsb_armour_folder
 			position = {
@@ -1042,58 +1041,19 @@ technologies = {
 			armor
 		}
 	}
-	#重型爆炸反应装甲
-	Heavy_Explosive_Reactive_Armor_tech = {
-		xor={Non_Explosive_Reactive_Armor_tech}
-		path = {
-			leads_to_tech = Self_Limiting_Explosive_Reactive_Armor_tech
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = Dynamic_Reactive_Armor_tech
-			research_cost_coeff = 1
-		}
-		enable_equipment_modules = {
-			Heavy_Explosive_Reactive_Armor
-		}
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 2024
-		folder = {
-			name = nsb_armour_folder
-			position = {
-				x = 1
-				y = 6
-			}
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		categories = {
-			armor
-		}
-	}
+	
 	#非爆炸反应庄家 NERA
-	Non_Explosive_Reactive_Armor_tech = {
-		xor={Heavy_Explosive_Reactive_Armor_tech}
-		path = {
-			leads_to_tech = Self_Limiting_Explosive_Reactive_Armor_tech
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = Dynamic_Reactive_Armor_tech
-			research_cost_coeff = 1
-		}
+	Next_Non_Explosive_Reactive_Armor_tech = {
 		enable_equipment_modules = {
-			SNon_Explosive_Reactive_Armor
+			Next_Non_Explosive_Reactive_Armor
+		}
+		path={
+			leads_to_tech=Self_Healing_Non_Explosive_Reactive_Armor_tech
+			research_cost_coeff=1
+		}
+		path={
+			leads_to_tech=Electrostrictive_Non_Explosive_Reactive_Armor_tech
+			research_cost_coeff=1
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1101,7 +1061,7 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = {
-				x = 3
+				x = 4
 				y = 6
 			}
 		}
@@ -1120,14 +1080,18 @@ technologies = {
 			armor
 		}
 	}
-	#自限性爆炸反应装甲 SLERA
-	Self_Limiting_Explosive_Reactive_Armor_tech = {
+	#SHNERA 自修复NERA
+	Self_Healing_Non_Explosive_Reactive_Armor_tech = {
+		xor = {
+			Electrostrictive_Non_Explosive_Reactive_Armor_tech
+		}
 		path = {
 			leads_to_tech = advanced_medium_tank_chassis
-			research_cost_coeff
+			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
-			Self_Limiting_Explosive_Reactive_Armor
+			SSelf_Healing_Non_Explosive_Reactive_Armor
+
 		}
 		show_effect_as_desc = yes
 		research_cost = 1
@@ -1154,12 +1118,126 @@ technologies = {
 			armor
 		}
 	}
-	
-	#动态反应装甲 DRA
-	Dynamic_Reactive_Armor_tech = {
+	#ENERA  电致伸缩NERA
+	Electrostrictive_Non_Explosive_Reactive_Armor_tech = {
+		xor = {
+			Self_Healing_Non_Explosive_Reactive_Armor_tech
+		}
 		path = {
 			leads_to_tech = advanced_medium_tank_chassis
-			research_cost_coeff
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			Electrostrictive_Non_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 5
+				y = 8
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#自限性爆炸反应装甲 SLERA
+	Self_Limiting_Explosive_Reactive_Armor_tech = {
+		xor = {
+			Dynamic_Reactive_Armor_tech
+		}
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			Self_Limiting_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 1
+				y = 8
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#先进爆炸反应装甲
+	Next_Explosive_Reactive_Armor_tech = {
+		path = {
+			leads_to_tech = Self_Limiting_Explosive_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = Dynamic_Reactive_Armor_tech
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			Next_Explosive_Reactive_Armor
+		}
+		show_effect_as_desc = yes
+		research_cost = 1
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = {
+				x = 0
+				y = 6
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		categories = {
+			armor
+		}
+	}
+	#动态反应装甲 DRA
+	Dynamic_Reactive_Armor_tech = {
+		xor = {
+			Self_Limiting_Explosive_Reactive_Armor_tech
+		}
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
+			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
 			Dynamic_Reactive_Armor
@@ -1170,7 +1248,7 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = {
-				x = 1
+				x = -1
 				y = 8
 			}
 		}
@@ -1191,7 +1269,6 @@ technologies = {
 	}
 	#先进型中型坦克底盘
 	advanced_medium_tank_chassis = {
-
 		#Panther
 		enable_equipments = {
 			modern_tank_chassis_3
@@ -1210,7 +1287,7 @@ technologies = {
 		}
 		research_cost = 3.5
 		start_year = 2024
-				allow = {
+		allow = {
 			AND = {
 				has_tech = Dynamic_Reactive_Armor_tech
 				has_tech = Self_Limiting_Explosive_Reactive_Armor_tech
