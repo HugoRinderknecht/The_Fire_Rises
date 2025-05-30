@@ -1290,7 +1290,8 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 			
-			#弹药科技树
+					
+			#动能弹药科技树
 			gridboxtype = {	
 				name = "apds_tech_tree"
 				position = { x = 70% y = 172 }
@@ -1298,7 +1299,7 @@ guiTypes = { #NVX# Tag for changes
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
-			
+			#化学能弹药科技树
 			gridboxtype = {	
 				name = "heat_tech_tree"
 				position = { x = 70% y = 172 }
