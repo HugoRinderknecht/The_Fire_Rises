@@ -496,3 +496,66 @@
  Electrostrictive_Non_Explosive_Reactive_Armor_tech_desc:"一种结合电致伸缩材料和非爆炸反应装甲（NERA）的新型智能防护技术。与传统NERA依赖机械变形不同，E-NERA利用电致伸缩材料（如PMN-PT陶瓷或聚合物复合材料）在电场作用下快速形变的特性，主动调整装甲结构以偏转或吸收弹头冲击能量。"
  Electrostrictive_Non_Explosive_Reactive_Armor:"电致伸缩NERA"
  Electrostrictive_Non_Explosive_Reactive_Armor_desc:"一种结合电致伸缩材料和非爆炸反应装甲（NERA）的新型智能防护技术。与传统NERA依赖机械变形不同，E-NERA利用电致伸缩材料（如PMN-PT陶瓷或聚合物复合材料）在电场作用下快速形变的特性，主动调整装甲结构以偏转或吸收弹头冲击能量。"
+
+ Ultra_High_Velocity_Explosives_tech:0 "超高速炸药"
+ Ultra_High_Velocity_Explosives_tech_desc:0 "通过改进炸药配方和引信设计，开发出更高爆速的新型炸药，提升装甲防护和弹药性能。"
+
+ Smart_And_Controllable_Explosives_tech:0 "智能可控炸药"
+ Smart_And_Controllable_Explosives_tech_desc:0 "研发具有可控引爆特性的智能炸药，可以精确控制爆炸时机和强度，显著提升装甲防护效果。"
+
+ Functionally_Graded_Tungsten_Alloy_tech:0 "梯度钨合金"
+ Functionally_Graded_Tungsten_Alloy_tech_desc:0 "开发具有功能梯度结构的新型钨合金材料，实现装甲性能的渐进式优化。"
+
+ Electromagnetic_Assisted_Tungsten_Armor_tech:0 "电磁辅助钨装甲"
+ Electromagnetic_Assisted_Tungsten_Armor_tech_desc:0 "将电磁场技术与钨合金装甲相结合，开发出具有主动防护能力的新型装甲系统。"
+
+ Smart_Directional_Explosive_Reactive_Armor_tech:0 "智能定向爆炸反应装甲"
+ Smart_Directional_Explosive_Reactive_Armor_tech_desc:0 "采用智能控制系统的定向爆炸反应装甲，能够根据攻击方向提供最佳防护效果。"
+
+ Electromagnetic_Explosive_Reactive_Armor_tech:0 "电磁-爆炸混合反应装甲"
+ Electromagnetic_Explosive_Reactive_Armor_tech_desc:0 "结合电磁防护与爆炸反应装甲技术，开发出具有双重防护机制的先进装甲系统。"
+
+ Adaptive_Non_Explosive_Reactive_Armor_tech:0 "智能自适应非爆炸反应装甲"
+ Adaptive_Non_Explosive_Reactive_Armor_tech_desc:0 "研发具有自适应能力的非爆炸反应装甲，可根据不同威胁自动调整防护性能。"
+
+ Metamaterial_Non_Explosive_Reactive_Armor_tech:0 "超材料非爆炸反应装甲"
+ Metamaterial_Non_Explosive_Reactive_Armor_tech_desc:0 "利用先进超材料技术，开发出具有优异防护性能的轻量化非爆炸反应装甲。"
+ Next_Non_Explosive_Reactive_Armor:0 "先进非爆炸反应装甲"
+ Next_Non_Explosive_Reactive_Armor_short:0 "先进NERA"
+ Next_Non_Explosive_Reactive_Armor_desc:0 "改进型非爆炸反应装甲，提供更好的整体防护效果。"
+
+ Self_Healing_Non_Explosive_Reactive_Armor:0 "自修复非爆炸反应装甲"
+ Self_Healing_Non_Explosive_Reactive_Armor_short:0 "自修复NERA"
+ Self_Healing_Non_Explosive_Reactive_Armor_desc:0 "具有自修复能力的非爆炸反应装甲，可靠性更高但成本较大。"
+
+ Electrostrictive_Non_Explosive_Reactive_Armor:0 "电致伸缩非爆炸反应装甲"
+ Electrostrictive_Non_Explosive_Reactive_Armor_short:0 "电致NERA"
+ Electrostrictive_Non_Explosive_Reactive_Armor_desc:0 "采用电场控制的高科技装甲，性能优秀但能耗较大。"
+
+ Next_Explosive_Reactive_Armor:0 "先进爆炸反应装甲"
+ Next_Explosive_Reactive_Armor_short:0 "先进ERA"
+ Next_Explosive_Reactive_Armor_desc:0 "改进型爆炸反应装甲，具有更好的防护效果。"
+
+ Dynamic_Reactive_Armor:0 "动态反应装甲"
+ Dynamic_Reactive_Armor_short:0 "动态装甲"
+ Dynamic_Reactive_Armor_desc:0 "最先进的反应装甲系统，提供最强防护但消耗巨大。"
+
+ Self_Limiting_Explosive_Reactive_Armor:0 "自限性爆炸反应装甲"
+ Self_Limiting_Explosive_Reactive_Armor_short:0 "自限ERA"
+ Self_Limiting_Explosive_Reactive_Armor_desc:0 "具有可控爆炸效果的改进型ERA，性能和可靠性均有提升。"
+
+ Smart_Directional_Explosive_Reactive_Armor:0 "智能定向爆炸反应装甲"
+ Smart_Directional_Explosive_Reactive_Armor_short:0 "智能定向ERA"
+ Smart_Directional_Explosive_Reactive_Armor_desc:0 "采用智能控制系统的定向ERA，可提供精确的定向防护。"
+
+ Electromagnetic_Explosive_Reactive_Armor:0 "电磁-爆炸混合反应装甲"
+ Electromagnetic_Explosive_Reactive_Armor_short:0 "电磁ERA"
+ Electromagnetic_Explosive_Reactive_Armor_desc:0 "结合电磁和爆炸反应技术的复合装甲系统，提供全方位防护。"
+
+ Adaptive_Non_Explosive_Reactive_Armor:0 "智能自适应非爆炸反应装甲"
+ Adaptive_Non_Explosive_Reactive_Armor_short:0 "自适应NERA"
+ Adaptive_Non_Explosive_Reactive_Armor_desc:0 "具有自适应功能的非爆炸反应装甲，可根据威胁调整防护性能。"
+
+ Metamaterial_Non_Explosive_Reactive_Armor:0 "超材料非爆炸反应装甲"
+ Metamaterial_Non_Explosive_Reactive_Armor_short:0 "超材料NERA"
+ Metamaterial_Non_Explosive_Reactive_Armor_desc:0 "使用先进超材料制造的轻量化非爆炸反应装甲，具有优异的防护效能。"

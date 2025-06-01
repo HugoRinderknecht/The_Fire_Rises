@@ -1827,13 +1827,13 @@ common/units/equipment/single_engine_airframe.txt
 common/units/equipment/spaa.txt
 common/units/equipment/support.txt
 common/units/equipment/tank_amphibious.txt
-common/units/equipment/tank_chassis.txt
+!/common/units/equipment/tank_chassis.txt
 common/units/equipment/tank_heavy.txt
 common/units/equipment/tank_medium.txt
 common/units/equipment/tank_super_heavy.txt
 common/units/equipment/twin_engine_airframe.txt
 common/units/equipment/x_plane_airframes.txt
-common/units/equipment/x_tank_chassis.txt
+!/common/units/equipment/x_tank_chassis.txt
 !/common/units/equipment/modules/00_plane_modules.txt
 !/common/units/equipment/modules/00_ship_modules.txt
 !/common/units/equipment/modules/00_tank_modules.txt
