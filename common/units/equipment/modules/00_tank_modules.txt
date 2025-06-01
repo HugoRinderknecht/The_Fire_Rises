@@ -98,137 +98,140 @@ equipment_modules = {
 			armor_value = 0.4
 		}
 	}
+	#====== 基础装甲模块 ======#
+	#复合装甲 - 早期基础装甲技术
 	tank_cast_armor = {
-		abbreviation = "cas"
-		category = tank_armor_type
-		sfx = sfx_ui_sd_module_sonar
-		add_stats = {
-			defense = 4
-			breakthrough = 4
-		}
-		xp_cost = 8
-		multiply_stats = {
-			build_cost_ic = 0.15
-			armor_value = 0.5
-		}
-	}
-	#====== 未来装甲模块 ======#
-	#NxNERA 先进非爆炸反应装甀甲
-	#相比传统NERA具有更好的防护性能,是一种较为全面的装甲防护方案
-	Next_Non_Explosive_Reactive_Armor = {
-		abbreviation = "NxNERA"		# 简称
+		abbreviation = "cas"		# 简称
 		category = tank_armor_type		# 装甲类型分类
-		sfx = sfx_ui_sd_module_armor		# 音效
+		sfx = sfx_ui_sd_module_sonar		# 音效
 		add_stats = {
 			defense = 3			# 基础防御加成
-			breakthrough = 2			# 基础突破加成  
-			hardness = 0.05			# 硬度加成5%
+			breakthrough = 3			# 基础突破加成
 		}
-		xp_cost = 12		# 研发经验值消耗
 		multiply_stats = {
 			build_cost_ic = 0.12			# 生产成本增加12%
-			armor_value = 0.35			# 装甲值提升35%
-			maximum_speed = -0.02			# 速度降低2% 
+			armor_value = 0.15			# 装甲值提升15%
 		}
+		xp_cost = 8		# 研发经验值消耗
 	}
-	#SHNERA 自修复非爆炸反应装甲
-	#具有自修复能力的NERA,可靠性更高,但成本相应增加
+	#====== 中期装甲模块 ======#
+	#先进非爆炸反应装甲(NxNERA) - 改进型NERA装甲
+	#相比传统NERA具有更好的防护性能,是一种较为全面的装甲防护方案
+	Next_Non_Explosive_Reactive_Armor = {
+		abbreviation = "NxNERA"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_armor
+		add_stats = {
+			defense = 4			# 较高防御加成
+			breakthrough = 3			# 中等突破加成
+			hardness = 0.06			# 硬度加成6%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.15			# 生产成本增加15%
+			armor_value = 0.25			# 装甲值提升25%
+			maximum_speed = -0.03			# 速度降低3%
+		}
+		xp_cost = 12
+	}
+	#自修复非爆炸反应装甲(SHNERA) - 具有自愈能力的NERA
+	#可靠性更高但成本相应增加
 	Self_Healing_Non_Explosive_Reactive_Armor = {
 		abbreviation = "SHNERA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_armor
 		add_stats = {
-			defense = 4			# 较高防御加成
-			breakthrough = 3			# 较高突破加成
-			hardness = 0.07			# 硬度加成7%
-			reliability = 0.06			# 可靠性提升6%
+			defense = 5			# 高防御加成
+			breakthrough = 4			# 较高突破加成
+			hardness = 0.08			# 硬度加成8%
+			reliability = 0.08			# 可靠性提升8%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.18			# 生产成本增加18%
+			armor_value = 0.35			# 装甲值提升35%
+			maximum_speed = -0.04			# 速度降低4%
 		}
 		xp_cost = 15
-		multiply_stats = {
-			build_cost_ic = 0.15			# 生产成本增加15%
-			armor_value = 0.4			# 装甲值提升40%
-			maximum_speed = -0.03			# 速度降低3%
-		}
 	}
-	#ELNERA 电致伸缩非爆炸反应装甲
-	#利用电场控制的高科技装甲,性能优秀但能耗较大
+	#电致伸缩非爆炸反应装甲(ELNERA) - 电场控制的高科技装甲
+	#性能优秀但能耗较大
 	Electrostrictive_Non_Explosive_Reactive_Armor = {
 		abbreviation = "ELNERA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_armor
 		add_stats = {
-			defense = 5			# 高防御加成
-			breakthrough = 4			# 高突破加成
-			hardness = 0.09			# 硬度加成9%
+			defense = 6			# 最高防御加成
+			breakthrough = 5			# 最高突破加成
+			hardness = 0.1			# 硬度加成10%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.22			# 生产成本增加22%
+			armor_value = 0.4			# 装甲值提升40%
+			maximum_speed = -0.05			# 速度降低5%
+			fuel_consumption = 0.08			# 燃料消耗增加8%
 		}
 		xp_cost = 15
-		multiply_stats = {
-			build_cost_ic = 0.2			# 生产成本增加20%
-			armor_value = 0.45			# 装甲值提升45%
-			maximum_speed = -0.04			# 速度降低4%
-			fuel_consumption = 0.06			# 燃料消耗增加6%
-		}
 	}
-	#NxERA 先进爆炸反应装甲
-	#改进型ERA,具有更好的防护效果,但仍存在可靠性问题
+	#====== 后期装甲模块 ======#
+	#先进爆炸反应装甲(NxERA) - 改进型ERA
+	#具有较好的防护效果,但仍存在可靠性问题
 	Next_Explosive_Reactive_Armor = {
 		abbreviation = "NxERA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_armor
 		add_stats = {
-			defense = 4			# 较高防御加成
-			breakthrough = 3			# 较高突破加成
-			hardness = 0.06			# 硬度加成6%
+			defense = 5			# 较高防御加成
+			breakthrough = 4			# 较高突破加成
+			hardness = 0.07			# 硬度加成7%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.17			# 生产成本增加17%
+			armor_value = 0.3			# 装甲值提升30%
+			maximum_speed = -0.04			# 速度降低4%
+			reliability = -0.04			# 可靠性降低4%
 		}
 		xp_cost = 12
-		multiply_stats = {
-			build_cost_ic = 0.15			# 生产成本增加15%
-			armor_value = 0.4			# 装甲值提升40%
-			maximum_speed = -0.03			# 速度降低3%
-			reliability = -0.03			# 可靠性降低3%
-		}
 	}
-	#DRA 动态反应装甲
-	#最先进的反应装甲系统,性能最强但各方面消耗也最大
+	#动态反应装甲(DRA) - 最先进的反应装甲系统
+	#性能最强但各方面消耗也最大
 	Dynamic_Reactive_Armor = {
 		abbreviation = "DRA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_armor
 		add_stats = {
-			defense = 6			# 最高防御加成
-			breakthrough = 5			# 最高突破加成
-			hardness = 0.12			# 最高硬度加成
+			defense = 7			# 最高防御加成
+			breakthrough = 6			# 最高突破加成
+			hardness = 0.15			# 最高硬度加成15%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.3			# 生产成本增加30%
+			armor_value = 0.5			# 装甲值提升50%
+			maximum_speed = -0.08			# 速度降低8%
+			reliability = -0.08			# 可靠性降低8%
+			fuel_consumption = 0.1			# 燃料消耗增加10%
 		}
 		xp_cost = 15
-		multiply_stats = {
-			build_cost_ic = 0.25			# 生产成本增加25%
-			armor_value = 0.55			# 装甲值提升55%
-			maximum_speed = -0.06			# 速度降低6%
-			reliability = -0.06			# 可靠性降低6%
-			fuel_consumption = 0.08			# 燃料消耗增加8%
-		}
 	}
-	#SLERA 自限性爆炸反应装甲
-	#改进型ERA,爆炸效果可控,性能和可靠性都有提升
+	#自限性爆炸反应装甲(SLERA) - 可控ERA
+	#爆炸效果可控,性能和可靠性平衡
 	Self_Limiting_Explosive_Reactive_Armor = {
 		abbreviation = "SLERA"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_armor
 		add_stats = {
-			defense = 5			# 高防御加成
-			breakthrough = 4			# 高突破加成
-			hardness = 0.1			# 较高硬度加成
-			reliability = 0.03			# 可靠性略有提升
+			defense = 6			# 高防御加成
+			breakthrough = 5			# 较高突破加成
+			hardness = 0.12			# 硬度加成12%
+			reliability = 0.05			# 可靠性提升5%
+		}
+		multiply_stats = {
+			build_cost_ic = 0.25			# 生产成本增加25%
+			armor_value = 0.45			# 装甲值提升45%
+			maximum_speed = -0.06			# 速度降低6%
 		}
 		xp_cost = 15
-		multiply_stats = {
-			build_cost_ic = 0.2			# 生产成本增加20%
-			armor_value = 0.5			# 装甲值提升50%
-			maximum_speed = -0.05			# 速度降低5%
-		}
 	}
-	#智能定向ERA模块
-	#采用智能控制系统的定向爆炸反应装甲,提供优秀的定向防护能力
+	#====== 特殊装甲模块 ======#
+	#智能定向ERA模块 - 智能控制的定向爆炸反应装甲
 	Smart_Directional_Explosive_Reactive_Armor = {
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_turret
@@ -238,11 +241,11 @@ equipment_modules = {
 			breakthrough = 5			# 突破值
 		}
 		add_average_stats = {
-			reliability = -0.06			# 可靠性惩罚
+			reliability = -0.06			# 可靠性惩罚6%
 		}
 		build_cost_resources = {
 			steel = 2			# 钢铁消耗
-			tungsten = 1			# 钨消耗
+			tungsten = 1			# 钨消耗  
 			explosives = 2			# 炸药消耗
 		}
 		multiply_stats = {
@@ -259,18 +262,17 @@ equipment_modules = {
 			explosive_components
 		}
 	}
-	#电磁-爆炸混合反应装甲模块
-	#结合电磁和爆炸反应技术的复合装甲系统,提供全方位防护
+	#电磁-爆炸混合反应装甲 - 电磁与ERA的复合系统
 	Electromagnetic_Explosive_Reactive_Armor = {
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			armor_value = 25			# 基础装甲值
-			defense = 8			# 防御值
+			defense = 8			# 高防御值
 			breakthrough = 3			# 突破值
 		}
 		add_average_stats = {
-			reliability = -0.08			# 可靠性惩罚
+			reliability = -0.08			# 可靠性惩罚8%
 		}
 		build_cost_resources = {
 			steel = 2			# 钢铁消耗
@@ -292,18 +294,17 @@ equipment_modules = {
 			electronics
 		}
 	}
-	#智能自适应NERA模块
-	#具有自适应功能的非爆炸反应装甲,可根据威胁自动调整防护性能
+	#智能自适应NERA - 自适应防护性能的NERA
 	Adaptive_Non_Explosive_Reactive_Armor = {
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			armor_value = 18			# 基础装甲值
-			defense = 10			# 防御值
+			defense = 10			# 最高防御值
 			breakthrough = 4			# 突破值
 		}
 		add_average_stats = {
-			reliability = -0.03			# 可靠性惩罚
+			reliability = -0.03			# 较小可靠性惩罚
 		}
 		build_cost_resources = {
 			steel = 3			# 钢铁消耗
@@ -324,15 +325,14 @@ equipment_modules = {
 			electronics
 		}
 	}
-	#超材料NERA模块
-	#使用先进超材料制造的非爆炸反应装甲,轻量化但防护效能高
+	#超材料NERA - 使用先进材料的轻量化NERA
 	Metamaterial_Non_Explosive_Reactive_Armor = {
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			armor_value = 15			# 基础装甲值
-			defense = 12			# 防御值
-			breakthrough = 5			# 突破值
+			defense = 12			# 最高防御值
+			breakthrough = 5			# 较高突破值
 		}
 		add_average_stats = {
 			reliability = -0.04			# 可靠性惩罚
